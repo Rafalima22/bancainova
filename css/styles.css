@@ -1,0 +1,473 @@
+/* ===== IMPORTAÇÕES DE FONTES ===== */
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Audiowide&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@300&family=Pacifico&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Audiowide&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@300&family=Pacifico&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Viga&display=swap');
+
+
+/* ===== VARIÁVEIS GLOBAIS ===== */
+
+:root {
+  --base-font-size: 62.5%; /* Define o font-size base */
+  --primary-color: #710780;
+  --secondary-color: #25d366;
+  --highlight-color: #ffdd57;
+  --background-color: #f8f9fa;
+  --text-color: #333;
+}
+
+/* ===== RESET E ESTILOS GLOBAIS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--base-font-size);
+}
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  box-shadow: none !important;
+  outline: none !important;
+}
+body {
+  font-size: 1.6rem;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-family: "Viga", sans-serif;
+}
+h2 {
+  font-size: 2rem;
+  font-family: "Viga", sans-serif;
+}
+h3 {
+  font-size: 1.8rem;
+  font-family: "Viga", sans-serif;
+}
+p,
+li,
+span,
+strong,
+a,
+i,b {
+  font-size: 1.4rem;
+  line-height: 1.6em;
+}
+/*imagem logo*/
+.imagem-logo_inova{
+  width: 14rem;
+  height: 5rem; 
+  padding: 0
+}
+
+/*hamburguer do menu*/
+.collapse {
+  transition: height 0.1s ease !important; /* Tempo menor para abrir/fechar */
+}
+.navbar-toggler i {
+  transition: transform 0.3s ease-in-out; /* Suaviza a rotação */
+}
+
+.navbar-toggler .fa-xmark {
+  transform: rotate(180deg); /* Faz o "X" girar ao aparecer */
+}
+
+.nav-link.fonte-menu:hover {
+  color: #710780; 
+}
+
+/*final hamburguer menu */
+
+/*navbar*/
+.navbar-brand {
+  font-size: 2rem;
+}
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 2.2rem;
+}
+.fonte-menu {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+  color: #710780;
+  font-weight: 600;
+}
+
+/*modal*/
+.paragrafo-default {
+  font-weight: 500;
+}
+.sombra-card{
+  border: none; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Move o card um pouco para cima */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+}
+
+.btn-close {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-size: contain; /* Garante que o SVG ocupe o espaço do botão */
+  transition: transform 0.8s ease-in-out;
+  outline: none; /* Remove o contorno */
+  box-shadow: none !important; /* Remove qualquer sombra */
+  --bs-btn-close-color: red !important;
+}
+.btn-close:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+.btn-close:active {
+  transform: rotate(15deg) scale(1.1);
+}
+.btn-close:hover {
+  --bs-btn-close-color: blue; /* Azul no hover */
+}
+
+/*seção matrícula */
+.content-matricula {
+  padding: 0;
+  width: 100%;
+  height: auto;
+}
+
+.content-matricula img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* carrossel */
+.c-letra {
+  font-size: 1.7rem;
+}
+.carrosel-imagens{
+  height: 7rem;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  margin-top: 5rem;
+}
+
+/* serviços*/
+.underlined {
+  position: relative;
+  display: inline-block;
+}
+
+.underlined::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+.paragrafo-servicos{
+  font-size: 1.4rem;
+  color: #686565;
+  margin: 0;
+}
+.botao-whats-servico{
+  font-size: 1.5rem; 
+  font-weight: 500;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.imagens-servicos{
+  width: 3rem;
+  height: 3rem;
+}
+
+/*final serviços*/
+.accordion-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 0.8rem;
+  box-shadow: none;
+}
+
+.button-icon img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+}
+
+.button-text {
+  flex: 1;
+  text-align: center;
+  font-weight: 700;
+}
+
+.accordion-item,
+.accordion-button {
+  border: none;
+}
+
+
+
+/*modal*/
+.btn-whatsapp {
+  font-size: 0.8rem;
+  padding: 6px 12px;
+}
+.modal-dialog {
+  max-height: 80vh; /* Limita a altura do modal para 80% da altura da tela */
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+
+.modal-body {
+  overflow-y: auto; /* Habilita a rolagem vertical */
+  max-height: 70vh; /* Limita a altura da área de conteúdo do modal */
+}
+/*final modal*/
+
+/* contador */
+.content-contador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.content-contador_numeros {
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary-color);
+  width: 100%;
+  max-width: 300px; /* Limitar a largura */
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.counter {
+  font-weight: 700;
+  font-size: 6rem;
+  font-style: oblique;
+}
+
+
+/*final contador*/
+
+/* ceo */
+.ceo-imagem{
+  width: 18rem;
+  height: 18rem;
+  object-fit: cover;
+}
+.ceo-section {
+  background-color: #c7c7c7; /* fundo suave */
+  padding: 30px 0;
+}
+
+.ceo-photo img {
+  border-radius: 50%; /* mantém a imagem redonda */
+}
+
+.ceo-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.ceo-info .ceo-description {
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+.ceo-info ul {
+  margin-top: 20px;
+}
+
+.ceo-info li {
+  margin-bottom: 8px;
+}
+
+.ceo-info a {
+  color: #ffffff; /* cor do link */
+  font-size: 1.1rem;
+}
+/*final ceo*/
+
+/*professores*/
+.professores-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.professor {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.professor img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #710780;
+  padding: 5px; /* Adiciona um pequeno espaço interno */
+}
+
+.professor .descricao {
+  display: flex;
+  flex-direction: column;
+}
+.professor h3 {
+  margin: 0;
+}
+.professor p {
+  margin: 5px 0;
+}
+/*footer*/
+
+.content-footer {
+  background-color: var(--primary-color);
+  position: relative;
+  padding-top: 1rem;
+}
+.content-footer_icones {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2.5rem;
+}
+.content-footer_icones i {
+  color: #fedb00; /* Cor dos ícones */
+  transition: color 0.3s ease;
+}
+
+.content-footer_icones i:hover {
+  color: #fff; /* Cor dos ícones ao passar o mouse */
+}
+.copyr {
+  font-size: 1.2rem;
+  background-color: #fedb00;
+  margin-top: 20px;
+  padding: 20px 0;
+  color: #710780;
+}
+/* botão whatsapp flutuante*/
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 9999;
+}
+
+.whatsapp img {
+  width: 70px;
+  height: auto;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+/* Telas grandes (desktop) */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.2rem;
+    font-family: "Viga", sans-serif;
+  }
+  h2 {
+    font-size: 3rem;
+    font-family: "Viga", sans-serif;
+  }
+  h3,
+  h4,
+  h5 {
+    font-size: 2.6rem;
+    font-family: "Viga", sans-serif;
+  }
+  p,
+  ul,
+  li,strong,b{
+    font-size: 1.5rem;
+    line-height: 1.5em;
+  }
+  body {
+    font-size: 2rem;
+  }
+
+  .button-text-cor {
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+  }
+
+.nav-link.fonte-menu {
+  display: inline-block; /* Faz com que o background se ajuste ao tamanho do texto */
+  padding: 3px 10px; /* Ajuste o padding conforme necessário */
+  
+}
+
+.nav-link.fonte-menu:hover {
+  background-color: #710780; /* Cor de fundo ao passar o mouse */
+  color: rgb(255, 251, 0); /* Muda a cor da fonte quando em hover */
+  border-radius: 20px;
+}
+.professores-grid {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+  justify-content: space-around; 
+}
+
+/*inicío da section time*/
+.professor {
+  flex: 1 1 22%;
+  max-width: 25%; 
+  box-sizing: border-box; 
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.professor img {
+  width: 100%;
+  max-width: 200px; 
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #710780;
+  padding: 5px;
+}
+
+.carrosel-imagens{
+  height: 7rem;
+}
+/*fim da section time*/
+
+}
+
+
+
+
+
